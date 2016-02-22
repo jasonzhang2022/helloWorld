@@ -1,0 +1,9 @@
+<aura:component extends="ui:outputDateTime">
+	<aura:handler name="init" value="{!this}" action="{!c.init}" />
+	
+	<aura:attribute name="srcValue" type="Date"/>
+	<aura:handler name="change" value="{!v.srcValue}" action="{!c.convert}"/>
+	<!-- 
+		not work 
+	-->
+</aura:component>

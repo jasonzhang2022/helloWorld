@@ -9,5 +9,8 @@
 			num2=cmp.get("v.num2");
 		}
 		cmp.set("v.sum", num1+num2);
+	},
+	change: function(cmp){
+		cmp.set("v.num1", 10);
 	}
 });

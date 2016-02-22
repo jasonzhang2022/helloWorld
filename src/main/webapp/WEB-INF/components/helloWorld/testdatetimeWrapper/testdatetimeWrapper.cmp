@@ -1,0 +1,19 @@
+<aura:component>
+	
+	<aura:attribute name="srcValue" type="Date"/>
+	<aura:attribute name="toValue" type="String"/>
+	
+	<aura:attribute name="srcValueString" type="String"/>
+	<aura:handler name="init" value="{!this}" action="{!c.init}" />
+	<aura:handler name="change" value="{!v.srcValue}" action="{!c.convert}"/>
+	
+	<div>
+		date time: <ui:outputDateTime value="{! v.toValue}"/>
+	</div>
+	<div>
+		json string: <ui:outputText value="{! v.srcValueString }"/>
+	</div>
+	<ui:button press="{!c.change}" label="change"/>
+	
+
+</aura:component>

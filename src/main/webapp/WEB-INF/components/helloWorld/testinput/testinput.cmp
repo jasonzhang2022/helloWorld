@@ -1,8 +1,8 @@
 <aura:component>
 
-	<aura:attribute name="num1" type="Number" />
-	<aura:attribute name="num2" type="Number" />
-	<aura:attribute name="sum" type="Number" />
+	<aura:attribute name="num1" type="Integer" default="3" />
+	<aura:attribute name="num2" type="Integer" default="2"/>
+	<aura:attribute name="sum" type="Integer" />
 	<aura:handler name="change" value="{!v.num1}" action="{!c.sum}"/>
 	<aura:handler name="change" value="{!v.num2}" action="{!c.sum}"/>
 	
@@ -12,6 +12,7 @@
 		<div>
 			{!v.num1} + {!v.num2} = {! v.sum}
 		</div>
+		<ui:button label="change first number to 10 " press="{! c.change}"/>
 	</form>
 
 </aura:component>
